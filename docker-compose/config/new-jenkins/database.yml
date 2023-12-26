@@ -1,6 +1,6 @@
 common: &common
   adapter: postgresql
-  host: localhost:3000
+  host: localhost
   password: Vampireberg/1
   encoding: utf8
   username: postgres
