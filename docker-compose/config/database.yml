@@ -1,9 +1,9 @@
 common: &common
   adapter: postgresql
-  host: <%= ENV.fetch('CANVAS_DATABASE_HOST', 'postgres') %>
-  password: <%= ENV.fetch('POSTGRES_PASSWORD') %>
+  host: localhost:3000
+  password: Vampireberg/1
   encoding: utf8
-  username: <%= ENV.fetch('CANVAS_DATABASE_USERNAME', 'postgres') %>
+  username: postgres
   timeout: 5000
   prepared_statements: false
   use_qualified_names: true
@@ -12,15 +12,15 @@ common: &common
 
 production:
   <<: *common
-  database: <%= ENV.fetch('CANVAS_DATABASE_PRODUCTION', 'canvas_production') %>
+  database: canvas_production
 
 development:
   <<: *common
-  database: <%= ENV.fetch('CANVAS_DATABASE_DEVELOPMENT', 'canvas_development') %>
+  database: canvas_development
 
 test:
   <<: *common
-  database: <%= ENV.fetch('CANVAS_DATABASE_TEST', 'canvas_test') %>
+  database: canvas_test
   shard1: canvas_test_shard_1
   shard2: canvas_test_shard_2
   test_shard_1: canvas_test_shard_1
