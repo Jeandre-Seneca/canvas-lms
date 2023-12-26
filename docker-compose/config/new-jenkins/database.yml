@@ -1,9 +1,9 @@
 common: &common
   adapter: postgresql
   host: localhost
-  password: Vampireberg/1
+  password: your_new_password  # Replace with the password you set for the new role
   encoding: utf8
-  username: postgres
+  username: your_new_role      # Replace with the new role name
   timeout: 5000
   prepared_statements: false
   use_qualified_names: true
