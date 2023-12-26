@@ -1,7 +1,7 @@
 common: &common
   adapter: postgresql
   host: localhost
-  password: your_new_password  # Replace with the password you set for the new role
+  password: canvas  # Replace with the password you set for the new role
   encoding: utf8
   username: your_new_role      # Replace with the new role name
   timeout: 5000
